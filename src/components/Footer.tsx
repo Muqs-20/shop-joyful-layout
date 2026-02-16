@@ -22,10 +22,10 @@ const Footer = () => (
         <div>
           <h4 className="font-body font-semibold text-sm uppercase tracking-wider mb-4">Help</h4>
           <ul className="space-y-2 text-sm opacity-70">
-            <li><a href="#" className="hover:opacity-100 transition-opacity">Shipping & Returns</a></li>
-            <li><a href="#" className="hover:opacity-100 transition-opacity">Size Guide</a></li>
-            <li><a href="#" className="hover:opacity-100 transition-opacity">FAQ</a></li>
-            <li><a href="#" className="hover:opacity-100 transition-opacity">Contact Us</a></li>
+            <li><Link to="/contact" className="hover:opacity-100 transition-opacity">Shipping & Returns</Link></li>
+            <li><Link to="/products" className="hover:opacity-100 transition-opacity">Size Guide</Link></li>
+            <li><Link to="/contact" className="hover:opacity-100 transition-opacity">FAQ</Link></li>
+            <li><Link to="/contact" className="hover:opacity-100 transition-opacity">Contact Us</Link></li>
           </ul>
         </div>
         <div>
@@ -43,8 +43,13 @@ const Footer = () => (
           </div>
         </div>
       </div>
-      <div className="mt-12 pt-8 border-t border-background/10 text-center text-xs opacity-50">
-        © 2026 LUXE. All rights reserved.
+      <div className="mt-12 pt-8 border-t border-background/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs opacity-50">
+        <span>© 2026 LUXE. All rights reserved.</span>
+        <div className="flex gap-6">
+          <Link to="/about" className="hover:opacity-100 transition-opacity">About</Link>
+          <Link to="/contact" className="hover:opacity-100 transition-opacity">Contact</Link>
+          <Link to="/products" className="hover:opacity-100 transition-opacity">Shop</Link>
+        </div>
       </div>
     </div>
   </footer>

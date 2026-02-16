@@ -5,8 +5,11 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ProductCard from "@/components/ProductCard";
 import { products } from "@/data/products";
+import { useCart } from "@/context/CartContext";
+import { toast } from "sonner";
 
 const ProductDetail = () => {
+  const { addItem } = useCart();
   const { id } = useParams();
   const product = products.find((p) => p.id === Number(id));
   const [selectedImage, setSelectedImage] = useState(0);
@@ -141,7 +144,13 @@ const ProductDetail = () => {
                   <Plus size={16} />
                 </button>
               </div>
-              <button className="btn-primary flex-1 flex items-center justify-center gap-2 text-sm">
+              <button
+                onClick={() => {
+                  addItem(product, quantity, selectedSize || undefined, product.colors?.[selectedColor]);
+                  toast.success(`${product.name} added to cart`);
+                }}
+                className="btn-primary flex-1 flex items-center justify-center gap-2 text-sm"
+              >
                 <ShoppingBag size={16} /> Add to Cart
               </button>
               <button className="w-10 h-10 flex items-center justify-center border border-border rounded-md text-secondary hover:bg-secondary/5 transition-colors" aria-label="Add to wishlist">
