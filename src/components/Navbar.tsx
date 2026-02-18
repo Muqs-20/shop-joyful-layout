@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { ShoppingBag, Search, Menu, X, Heart } from "lucide-react";
+import { ShoppingBag, Search, Menu, X, Heart, User } from "lucide-react";
 import { useState } from "react";
 import { useCart } from "@/context/CartContext";
 
@@ -45,6 +45,9 @@ const Navbar = () => {
           <button className="hidden sm:block text-muted-foreground hover:text-foreground transition-colors" aria-label="Wishlist">
             <Heart size={20} />
           </button>
+          <Link to="/login" className="hidden sm:block text-muted-foreground hover:text-foreground transition-colors" aria-label="Account">
+            <User size={20} />
+          </Link>
           <Link to="/cart" className="relative text-muted-foreground hover:text-foreground transition-colors" aria-label="Cart">
             <ShoppingBag size={20} />
             {totalItems > 0 && (
