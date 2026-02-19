@@ -22,11 +22,10 @@ const Footer = () => (
         <div>
           <h4 className="font-body font-semibold text-sm uppercase tracking-wider mb-4">Help</h4>
           <ul className="space-y-2 text-sm opacity-70">
-            <li><Link to="/shipping-returns" className="hover:opacity-100 transition-opacity">Shipping & Returns</Link></li>
-            <li><Link to="/order-tracking" className="hover:opacity-100 transition-opacity">Order Tracking</Link></li>
-            <li><Link to="/faq" className="hover:opacity-100 transition-opacity">FAQ</Link></li>
+            <li><Link to="/contact" className="hover:opacity-100 transition-opacity">Shipping & Returns</Link></li>
+            <li><Link to="/products" className="hover:opacity-100 transition-opacity">Size Guide</Link></li>
+            <li><Link to="/contact" className="hover:opacity-100 transition-opacity">FAQ</Link></li>
             <li><Link to="/contact" className="hover:opacity-100 transition-opacity">Contact Us</Link></li>
-            <li><Link to="/privacy-policy" className="hover:opacity-100 transition-opacity">Privacy Policy</Link></li>
           </ul>
         </div>
         <div>
